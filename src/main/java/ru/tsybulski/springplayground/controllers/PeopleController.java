@@ -24,11 +24,11 @@ public class PeopleController {
         return "people/index";
     }
 
-    @GetMapping("/show")
-    public String show(@PathVariable("id") int id, Model model) {
-        model.addAttribute("person", personDAO.show(id));
-        return "people/show";
-    }
+//    @GetMapping("/show")
+//    public String show(@PathVariable("id") int id, Model model) {
+//        model.addAttribute("person", personDAO.show(id));
+//        return "people/show";
+//    }
 
     @GetMapping("/new")
     public String newPerson(Model model) {
@@ -41,16 +41,17 @@ public class PeopleController {
         personDAO.save(person);
         return "redirect:/people/index";
     }
-
-    @GetMapping("/{id}/edit")
-    public String edit(Model model, @PathVariable("id") int id){
-        model.addAttribute("person", personDAO.show(id));
-        return "";
-    }
-
-    @PatchMapping("/{id}")
-    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id){
-        personDAO.update(id, person);
-        return "redirect:/people/index";
-    }
 }
+
+//    @GetMapping("/{id}/edit")
+//    public String edit(Model model, @PathVariable("id") int id){
+//        model.addAttribute("person", personDAO.show(id));
+//        return "";
+//    }
+
+//    @PatchMapping("/{id}")
+//    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id){
+//        personDAO.update(id, person);
+//        return "redirect:/people/index";
+//    }
+//}
