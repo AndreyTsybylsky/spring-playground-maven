@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://thymeleaf.org ">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Все люди</title>
@@ -8,8 +7,9 @@
 <body>
 
 <div th:each="person : ${people}">
-    <a th:href="@{/people/show/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a>user</a>
+    <a th:href="@{/people/show/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a></a>
 </div>
 
 </body>
 </html>
+
